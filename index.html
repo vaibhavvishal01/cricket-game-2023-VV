@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Cricket Game</title>
 </head>
+
 <body>
-    <button>bat</button>
-    <button>ball</button>
-    <button>bat</button>
+    <div class="main">
+        <h1>Cricket Game 2023</h1>
+
+        <button onclick="let computerChoice = generateComputerchoice();
+        let resultMsg = getResult('Bat', computerChoice);
+        showResult('Bat', computerChoice, resultMsg);">Bat</button>
+
+
+        <button onclick="computerChoice = generateComputerchoice();
+         resultMsg = getResult('Ball', computerChoice);
+         showResult('Ball', computerChoice, resultMsg);">Ball</button>
+
+        <button onclick="computerChoice = generateComputerchoice();
+        resultMsg = getResult('Stump', computerChoice);
+        showResult('Stump', computerChoice, resultMsg);">Stump</button>
+
+
+        <button id="reset-btn" onclick="localStorage.clear() 
+        alert(`Score is Reset, Please Refresh it.`)">Reset</button>
+
+        <div class="display">
+            <h3 id="user-move"></h3>
+            <h3 id="computer-move"></h3>
+            <h3 id="result-move"></h3>
+            <h3 id="score-move"></h3>
+
+        </div>
+
+        
+    </div>
+
+    <footer><h4>Devloped by Vaibhav Vishal</h4></footer>
+
+
     <script src="script.js"></script>
 </body>
+
 </html>
