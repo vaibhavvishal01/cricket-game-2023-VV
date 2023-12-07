@@ -65,7 +65,7 @@ function getResult(userMove, computerMove) {
 
 }
 
-function showResult(userMove, computerMove, result){
+function showResult(userMove, computerMove, result) {
     localStorage.setItem('score', JSON.stringify(score));
 
     document.querySelector('#user-move').innerText = `You have Chosen ${userMove}.`;
@@ -74,5 +74,5 @@ function showResult(userMove, computerMove, result){
     document.querySelector('#score-move').innerText = ` ${score.displayScore()}.`;
 }
  
-
+document.querySelector('#reset-btn').onclick.innerText= 'Wins 0';
 
